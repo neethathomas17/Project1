@@ -6,14 +6,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	// creating a personal inventory store from home during the pandemic
+	// Creating a personal inventory store from home during the pandemic
 
         System.out.printf("The date is %tD\n", new Date() );
         System.out.println("Welcome to Sarah's online store where you can find a variety of clothing items");
         System.out.println("What is the customer's full name?");
         Scanner input = new Scanner(System.in);
         String customerName = input.next();
+        String fullNameUpper = customerName.toUpperCase();
         final double shippingRate = 2.39;
+        String myfirstString= "Clothing-";
+        String mysecondString="styles";
+        String plusOperator=myfirstString+ " " + mysecondString;
+        System.out.println (plusOperator);
+
 
 
 
@@ -54,7 +60,7 @@ public class Main {
             System.out.println();
 
         }
-        System.out.println("Your choices are customer service, tracking, contact number, shipping");
+        System.out.println("Your choices are Customer Service, Tracking, Contact Number, Shipping");
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter an option for general information for the company: ");
 
@@ -86,6 +92,23 @@ public class Main {
                 System.out.println ("Invalid option");
         }
 
+        Scanner input = new Scanner (System.in);
+        System.out.print ("Enter your size preference: ");
+        String sizePreference = input.next();
 
+        if (sizePreference == "Small")
+            System.out.println ("Size 2");
+
+        else if  (sizePreference == "Medium")
+            System.out.println ("Size 4");
+
+        else if (sizePreference == "Large")
+            System.out.println("Size 6");
+
+        else if (sizePreference == "Extra Large")
+            System.out.println("Size 8 and up");
+
+        else
+            System.out.println ("Invalid size");
 }}
 
